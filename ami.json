@@ -24,7 +24,7 @@
             "launch_block_device_mappings": [
                 {
                     "device_name": "/dev/sda1",
-                    "volume_size": 8,
+                    "volume_size": 20,
                     "volume_type": "gp2",
                     "delete_on_termination": true
                 }
@@ -40,8 +40,8 @@
             "echo 'Installing Java on machine'",
             "sudo apt install openjdk-8-jdk",
             "echo 'Java installed successfully'",
-            "sudo apt-get install ruby",
-            "sudo apt-get install wget",
+            "sudo apt-get install ruby -y",
+            "sudo apt-get install wget -y",
             "cd /home/ubuntu",
             "echo 'Downloading codedeploy'",
             "wget https://aws-codedeploy-{{user `aws_region`}}.{{user `aws_region`}}.s3.amazonaws.com/latest/install",
