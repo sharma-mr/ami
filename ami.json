@@ -5,7 +5,7 @@
         "aws_region": "",
         "subnet_id": "",
         "source_ami": "",
-	"ami_users": "",
+	    "ami_users": "",
         "ssh_username":"ubuntu"
     },
     "builders": [
@@ -38,7 +38,7 @@
             "cd ~",
             "sudo apt-get update",
             "echo 'Installing Java on machine'",
-            "sudo apt install openjdk-8-jdk",
+            "sudo apt install default-jre",
             "echo 'Java installed successfully'",
             "sudo apt-get install ruby -y",
             "sudo apt-get install wget -y",
@@ -49,6 +49,7 @@
             "chmod +x ./install",
             "sudo ./install auto",
             "echo 'Checking status of codedeploy agent",
+            "sudo service codedeploy-agent start"
             "sudo service codedeploy-agent status"
          ]
         }
