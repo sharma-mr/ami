@@ -49,7 +49,7 @@
             "chmod +x ./install",
             "sudo ./install auto",
             "echo 'Checking status of codedeploy agent",
-            "sudo service codedeploy-agent start"
+            "sudo service codedeploy-agent start",
             "sudo service codedeploy-agent status"
          ]
         }
