@@ -34,10 +34,12 @@
     "provisioners": [
         {
             "type": "shell",
-	    "scripts": [
-              "java-installation.sh"
-              ],
         "inline":[
+            "cd ~",
+            "sudo apt-get update",
+            "echo 'Installing Java on machine'",
+            "sudo apt install openjdk-8-jdk",
+            "echo 'Java installed successfully'"
             "sudo apt-get install ruby",
             "sudo apt-get install wget",
             "cd /home/ubuntu",
