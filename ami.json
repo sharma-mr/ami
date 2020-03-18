@@ -52,7 +52,7 @@
             "echo 'Downloading cloudwatch agent'",
             "sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb",
             "echo 'Cloudwatch downloaded successfully'",
-            "chmod +x ./amazon-cloudwatch-agent.deb",
+            "sudo chmod +x ./amazon-cloudwatch-agent.deb",
             "sudo dpkg -i -E ./amazon-cloudwatch-agent.deb",
             "sudo cp amazon-cloudwatch-agent.service /etc/systemd/system/",
             "echo 'Enabling Cloudwatch Agent Service'",
