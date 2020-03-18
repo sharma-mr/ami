@@ -48,13 +48,17 @@
             "echo 'Codedeploy downloaded successfully'",
             "chmod +x ./install",
             "sudo ./install auto",
+            "sudo apt-get update",
             "echo 'Downloading cloudwatch agent'",
-            "sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/arm64/latest/amazon-cloudwatch-agent.deb",
+            "sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb",
             "echo 'Cloudwatch downloaded successfully'",
+            "chmod +x ./amazon-cloudwatch-agent.deb",
             "sudo dpkg -i -E ./amazon-cloudwatch-agent.deb",
-            "echo 'Starting Cloudwatch Agent'",
-            "sudo systemctl enable amazon-cloudwatch-agent",
-            "sudo systemctl start amazon-cloudwatch-agent",
+            "sudo cp amazon-cloudwatch-agent.service /etc/systemd/system/",
+            "echo 'Enabling Cloudwatch Agent Service'",
+            "sudo systemctl enable amazon-cloudwatch-agent.service",
+            "echo 'Starting Cloudwatch Agent Service'",
+            "sudo systemctl start amazon-cloudwatch-agent.service",
             "echo 'Cloudwatch agent started successfully'"
          ]
         }
