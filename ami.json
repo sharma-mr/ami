@@ -54,11 +54,12 @@
             "echo 'Cloudwatch downloaded successfully'",
             "sudo chmod +x ./amazon-cloudwatch-agent.deb",
             "sudo dpkg -i -E ./amazon-cloudwatch-agent.deb",
-            "sudo cp amazon-cloudwatch-agent.service /etc/systemd/system/",
+            "pwd",
+            "ls -al",
             "echo 'Enabling Cloudwatch Agent Service'",
-            "sudo systemctl enable amazon-cloudwatch-agent.service",
+            "sudo systemctl enable amazon-cloudwatch-agent",
             "echo 'Starting Cloudwatch Agent Service'",
-            "sudo systemctl start amazon-cloudwatch-agent.service",
+            "sudo systemctl start amazon-cloudwatch-agent",
             "echo 'Cloudwatch agent started successfully'"
          ]
         }
